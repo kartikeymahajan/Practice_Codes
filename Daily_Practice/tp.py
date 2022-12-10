@@ -1,23 +1,8 @@
-class Solution:
-    # @return a list of lists of integers
-    # 9:14
-    def __init__(self):
-        self.output = []
+class _Node:
 
-    def combine(self, n, k, pos=0, temp=None):
-        temp = temp or []
-        
-        if len(temp) == k:
-            self.output.append(temp[:])
-            return
+    def __init__(self, _element, _next):
+        self.element = _element
+        self.next = _next
 
-        for i in range(pos, n):
-            temp.append(i+1)
-            self.combine(n, k, i+1, temp)
-            temp.pop()
-        
-        return self.output
-
-obj = Solution()
-op = obj.combine(4,1)
-print(op)
+class LinkedList:
+    pass

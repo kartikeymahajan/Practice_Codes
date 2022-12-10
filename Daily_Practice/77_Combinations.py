@@ -19,5 +19,5 @@ class Solution:
         return self.output
 
 obj = Solution()
-op = obj.combine(4,1)
+op = obj.combine(5,3)
 print(op)
