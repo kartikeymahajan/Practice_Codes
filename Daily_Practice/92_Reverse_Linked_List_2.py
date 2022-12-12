@@ -48,7 +48,6 @@ class LinkedList:
         if self.isempty():
             print("List is empty..")
         a = self.search(k)
-        b = self.search(j)
         count = 0
         p = self._head
         while count < a:
@@ -71,4 +70,3 @@ obj.addlast(46)
 obj.display()
 obj.SwapNodes(17,94)
 obj.display()
-        
