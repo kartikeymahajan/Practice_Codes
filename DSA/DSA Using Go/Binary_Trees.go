@@ -83,6 +83,16 @@ func InitTree() *Node {
 	return root
 }
 
+/*
+Tree representation--
+          1
+        /   \
+	   2     3
+	  / \   / \
+     4   5 6   7
+
+*/
+
 func main() {
 	obj := InitTree()
 	fmt.Println("Preorder Traversal")
