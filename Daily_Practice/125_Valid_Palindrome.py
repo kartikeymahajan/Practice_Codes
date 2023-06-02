@@ -4,10 +4,7 @@ def ValidPalindrome(st: str)->bool:
         if i.isalnum():
             new+=i
     reverse = new[::-1]
-    if new.lower() == reverse.lower():
-        return True
-    else:
-        return False
+    return new.lower() == reverse.lower()
 
 st = "A man, a plan, a canal: Panama"
 op = ValidPalindrome(st)

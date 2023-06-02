@@ -6,4 +6,4 @@ def palindrome(x,y):
             li.append(n)
     print(li)
 
-palindrome(10,100)
+palindrome(700,800)

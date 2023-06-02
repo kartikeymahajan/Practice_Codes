@@ -1,7 +1,7 @@
 class Solution:
     def rob(self, nums: list[int]) -> int:
         if len(nums) == 2:
-            return 0
+            return max(nums)
         else:
             li = []
             for i in range(0,2,1):
@@ -11,6 +11,6 @@ class Solution:
                 li.append(count)
             return max(li)
 
-nums = [1,2,3,1]
+nums = [1,2]
 obj = Solution().rob(nums)
 print(obj)

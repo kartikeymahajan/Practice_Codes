@@ -1,3 +1,4 @@
+import time
 def BinarySearch(li, element):
     l = 0
     r = len(li)-1
@@ -9,8 +10,10 @@ def BinarySearch(li, element):
             r = m-1
         elif element > li[m]:
             l = m+1
-    return "not found"
+    return "ElementNotExists"
 
-li = [12,45,65,76,83]
-op = BinarySearch(li, 12)
+li = [2,3,7,12,17,23,45,70]
+# t = time.time()
+op = BinarySearch(li, 4)
 print(op)
+# print(time.time() - t)

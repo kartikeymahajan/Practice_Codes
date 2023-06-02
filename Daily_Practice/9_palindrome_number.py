@@ -9,5 +9,5 @@ class Solution:
             return False
 
 obj = Solution()
-op = obj.isPalindrome(112)
+op = obj.isPalindrome(11)
 print(op)

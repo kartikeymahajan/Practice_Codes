@@ -1,4 +1,4 @@
-lst = [1,5,7,1]
+lst = [1,2,3]
 def findPairs(lst, K): 
     # res = []
     count = 0
@@ -12,4 +12,4 @@ def findPairs(lst, K):
     # res.reverse()
     return count
 
-print(findPairs(lst, 6))
+print(findPairs(lst, 3))

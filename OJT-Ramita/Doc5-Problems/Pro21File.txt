@@ -1,0 +1,4 @@
+At first step, first two elements of sequence are picked and the result is obtained.
+Next step is the second.
+This process continues till no more elements are left in the container.
+The final returned result is on console.

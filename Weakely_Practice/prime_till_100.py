@@ -1,7 +1,8 @@
 
-def prime_between(rangeFrom: int, rangeTo: int):   
+def prime_between(rangeTo: int):   
     li = [] 
-    for num in range(rangeFrom, rangeTo): #Traversing through given range.
+    count = 0
+    for num in range(rangeTo+1): #Traversing through given range.
         flag = True
         if num > 1:
             while flag:
@@ -10,11 +11,12 @@ def prime_between(rangeFrom: int, rangeTo: int):
                         flag = False
                         break
                 else:
+
                     li.append(num)
                     break
     return li
 
-obj = prime_between(0,100)
+obj = prime_between(10)
 print(obj)
 
 

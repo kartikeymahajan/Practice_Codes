@@ -55,7 +55,7 @@ class LinkedList:
                         current._element = index._element
                         index._element = temp
                     index = index._next
-                current = current._next
+                current = current._next 
 
 l = LinkedList()
 l.add(32)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func checkPalindrome(num int) string {
+func checkPalindrome(num int) bool {
 	input_num := num
 	var remainder int
 	res := 0
@@ -16,9 +16,9 @@ func checkPalindrome(num int) string {
 	}
 
 	if input_num == res {
-		return "Palindrome"
+		return true
 	} else {
-		return "Not a Palindrome"
+		return false
 	}
 }
 

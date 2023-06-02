@@ -1,10 +1,10 @@
 def ReverseWords(st: str)->str:
-    reverse =" "
     li = list(st.split(" "))
     temp = li[::-1]
-    reverse = reverse.join(temp)
+    reverse = " ".join(temp)
+    reverse = " ".join(reverse.split())
     return reverse
 
-st = input("Enter a string: ")
+st = "My name is     kartik"
 op = ReverseWords(st)
 print(op)
