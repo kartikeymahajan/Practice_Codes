@@ -1,17 +1,6 @@
-import requests
-import json
+import sys
+import importlib
 
-parameters = {
-    "lat": 40.71,
-    "lon": -74
-}
+importlib.reload(sys)
 
-res = requests.get("https://api.open-notify.org/iss-pass.json")
 
-print(res)
-
-# def jprint(obj):
-#     text = json.dumps(obj, sort_keys=True, indent=4)
-#     print(text)
-
-# jprint(res.json())
