@@ -1,32 +1,15 @@
-# defining a decorator
-def hello_decorator(func):
- 
-    # inner1 is a Wrapper function in
-    # which the argument is called
-     
-    # inner function can access the outer local
-    # functions like in this case "func"
-    def inner1():
-        print("Hello, this is before function execution")
- 
-        # calling the actual function now
-        # inside the wrapper function.
-        func()
- 
-        print("This is after function execution")
-         
-    return inner1
- 
- 
-# defining a function, to be called inside wrapper
-def function_to_be_used():
-    print("This is inside the function !!")
- 
- 
-# passing 'function_to_be_used' inside the
-# decorator to control its behaviour
-function_to_be_used = hello_decorator(function_to_be_used)
- 
- 
-# calling the function
-function_to_be_used()
+'''Here we are modifying the behavior of hello function using decorator concept'''
+
+def upper_case(func):
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        return result.upper()
+    return wrapper
+
+@upper_case # sending hello function to decorator funciton i.e.(upper_case()) equivalent to hello = upper_case(hello)
+def hello(name, age):
+    return f"Hello {name}, my age is {age}"
+
+obj = hello("kiran", 34)
+print(obj)
+

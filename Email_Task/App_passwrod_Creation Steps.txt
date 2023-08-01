@@ -1,0 +1,8 @@
+Step 1 - Login to email account
+Step 2 - Go to manage your account
+Step 3 - Go to security
+Step 4 - Go to two step varification (You have to activate your two step varification)
+Step 5 - In Two Step Varification go to App Passwords(Bottom of that page)
+Step 6 - Select app as "other" and give any tag/name and click on generate
+
+then in the popup screen you get a unique key, copy that key and use it as password.
