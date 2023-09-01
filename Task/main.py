@@ -12,13 +12,18 @@ smtp_port = 587
 smtp_server = "smtp.gmail.com"
 
 # email address from we sent the email
-email_from = "areakingapp@gmail.com"
+# email_from = "areakingapp@gmail.com"
 
 #email_list = ["areakingpanna@gmail.com","hemantkurmi1998@gmail.com"]
-
+with open('one.json',) as file:    
+    data = json.load(file)
+    email_from = data['sender']
+with open('one.json',) as file:    
+    data = json.load(file)
+    PASSWORD = data['password']
 
 # authuntication password for the login of the email
-PASSWORD = 'vbwmytcpdbajzohe'
+# PASSWORD = 'vbwmytcpdbajzohe'
 
 # subject of the email
 subject = "Email with attachments"
@@ -28,7 +33,7 @@ subject = "Email with attachments"
 
 
 # fetch data from the json file
-with open('Task/one.json',) as file:
+with open('one.json',) as file:
     data = json.load(file)
 data = data['recipients']
 
@@ -57,7 +62,7 @@ def send_emails(data):
 
         msg.attach(MIMEText(body,'plain')) # attachment of the email
 
-        filename = 'Task/file.txt'    # filename is the variable that we pass indicate the file address
+        filename = 'file.txt'    # filename is the variable that we pass indicate the file address
 
         attachment = open(filename,'rb')
 
@@ -87,10 +92,7 @@ def send_emails(data):
 time_interval = 60 # in second
 
 while True:
-    if filesize > definedsize:
-        send_emails(Email_data)
-    else:
-        send_emails(Email_data)
-    time.sleep(time_interval)
+    send_emails(data)
+    # time.sleep(time_interval)
     print('Email sent successfully.')
     

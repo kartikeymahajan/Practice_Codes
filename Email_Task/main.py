@@ -13,28 +13,35 @@ def send_Emails(data_file):
     """This is the main funtion which is used to send emails
     It takes a file which is having emails as a argument"""
 
+    # Load recipient emails from JSON file
+    data_file_path = f"F:\Kartikeya\Git\Email_Task\{data_file}"
+    with open(data_file_path) as json_file:
+        data = json.load(json_file)
+
+    print(data)
+
+    recipients = data["recipients"]
+
+    print(recipients)
+
+
     # Email configuration
-    sender_email = "kartikeymahajan321@gmail.com"
+    sender_email = data["sender"][0]
     # receiver_email = "kmahajan@msystechnologies.com"
 
     # SMTP server configuration
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
-    smtp_username = "kartikeymahajan321@gmail.com"
-    smtp_password = "ubcdwhdsqlgkgtqg"
+    smtp_username = data["sender"][0]
+    smtp_password = data["password"][0]
 
-    # Load recipient emails from JSON file
-    data_file_path = f"F:\Kartikeya\Git\Email_Task\{data_file}"
-    with open(data_file_path) as json_file:
-        recipients = json.load(json_file)
 
     # Iterate over recipients and send emails
     for recipient in recipients:
-        receiver_email = recipient["email"]
-        reciver_name = recipient["name"]
+        receiver_email = recipient
 
         subject = f"Dummy Mail"
-        message = f"""Hi {reciver_name},
+        message = f"""Hi,
     This is a auto-generated mail. 
     Please don't reply.
             
@@ -72,7 +79,7 @@ def send_Emails(data_file):
             # Send the email
             server.send_message(msg)
 
-            print(f"Email sent successfully to {reciver_name}")
+            print(f"Email sent successfully...")
 
             # Delay between sending emails
             # time.sleep(2)  # Adjust the time interval as needed

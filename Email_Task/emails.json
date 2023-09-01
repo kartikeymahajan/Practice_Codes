@@ -1,7 +1,8 @@
 
-[
-    {
-        "name": "Kartikeya M", "email": "kmahajan@msystechnologies.com"
-    }
-    
-]
+{   
+    "recipients": ["kmahajan@msystechnologies.com", "hpatel@msystechnologies.com"],    
+    "sender": ["kartikeymahajan321@gmail.com"],    
+    "password": ["ubcdwhdsqlgkgtqg"],  
+    "email trigger timer": 60,    
+    "file size": 10
+}

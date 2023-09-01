@@ -1,9 +1,13 @@
-{
-    "recipients": [
-      "areakingpanna@gmail.com",
-      "hemantkurmi1998@gmail.com",
-      "hpatel@msystechnologies.com",
-      "kmahajan@msystechnologies.com",
-      "kartikeymahajan321@gmail.com"
-    ]  
-}
+
+ 
+ 
+ {    "recipients":
+  
+ [         "hemantkurmi1998@gmail.com",
+  "hpatel@msystechnologies.com",
+  "kmahajan@msystechnologies.com",
+  "kartikeymahajan321@gmail.com"], 
+          "sender": ["sbhattacharya@msystechnologies.com"],    
+          "password": ["raollpciecrntujc"],  
+            "email trigger timer": 60,  
+              "file size": 10}
